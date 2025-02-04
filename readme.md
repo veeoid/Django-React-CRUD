@@ -1,5 +1,6 @@
-Django-React-CRUD
-A simple Create, Read, Update, and Delete (CRUD) application built using Django (with the Django REST framework) on the backend and React on the frontend. This project demonstrates how to set up basic endpoints in Django for managing data and how to consume and interact with those endpoints in a React client.
+#Django-React-CRUD
+
+##A simple Create, Read, Update, and Delete (CRUD) application built using Django (with the Django REST framework) on the backend and React on the frontend. This project demonstrates how to set up basic endpoints in Django for managing data and how to consume and interact with those endpoints in a React client.
 
 Features
 Django REST API for managing Book records:
