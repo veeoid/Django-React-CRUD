@@ -81,7 +81,9 @@ function App() {
 
   return (
     <>
-      <h1> Book Website </h1>
+      <div id="header-container">
+        <h1>📚 Book Website</h1>
+      </div>
       <div>
         <input
           type="text"
@@ -93,21 +95,27 @@ function App() {
           placeholder="Release Year..."
           onChange={(e) => setReleaseYear(e.target.value)}
         />
-        <button onClick={addBook}> Add Book </button>
+        <button onClick={addBook}>➕ Add Book</button>
       </div>
       {books.map((book) => (
-        <div>
-          <p>Title: {book.title}</p>
-          <p>Release Year: {book.release_year}</p>
+        <div className="book-container" key={book.id}>
+          <p>
+            <strong>📖 Title:</strong> {book.title}
+          </p>
+          <p>
+            <strong>📅 Release Year:</strong> {book.release_year}
+          </p>
           <input
             type="text"
             placeholder="New Title..."
             onChange={(e) => setNewTitle(e.target.value)}
           />
           <button onClick={() => updateTitle(book.id, book.release_year)}>
-            Change Title
+            ✏️ Change Title
           </button>
-          <button onClick={() => deleteBook(book.id)}> Delete </button>
+          <button className="delete-btn" onClick={() => deleteBook(book.id)}>
+            ❌ Delete
+          </button>
         </div>
       ))}
     </>
